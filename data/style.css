@@ -1,0 +1,86 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertikal */
+}
+
+.panel{
+    width: min(92vw, 360px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.buttonstyle{
+    border:1px solid black;
+    color:#00509b;
+    border-radius: 20px;
+    background: white;
+    font-size: 18px;
+    padding: 10px 14px;
+}
+
+.buttonstyle:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    min-height: 24px;
+}
+
+.inputs{
+    display: flex;
+    gap: 12px;
+}
+
+.input_field{
+    border:1px solid black;
+    color:#00509b;
+    border-radius: 20px;
+    background: white;
+    font-size: 18px;
+    padding: 10px 14px;
+}
+
+/* sorgt dafür, dass Breiten inkl. Border/Padding sauber berechnet werden */
+* { box-sizing: border-box; }
+
+/* gleiche “Spaltenbreite” für Inputs und Buttons */
+.inputs > input,
+.buttons > button {
+  flex: 1;
+}
+
+.inputs > input,
+.buttons > button {
+  flex: 1;
+}
+
+.inputs, .buttons {
+  width: 100%;
+}
+
+.input_field,.buttonstyle{
+    min-width: 0;
+}
+
+/* Chrome, Edge, Safari */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>XIAO ESP32C3</title>
+    <!-- <link rel="stylesheet" href="/style.css">
+    <script src="/app.js" defer></script> -->
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <!-- <h1>HTTP Server läuft</h1> -->
+    <!-- <p>IP: <span id="ip">-</span></p>
+    <p>RSSI: <span id="rssi">-</span></p> -->
+    <form method="POST" action="/api/set" class="panel">
+      <div class="inputs">
+        <input class="input_field" id="hh" type="number" name="hh" min="0" max="23" aria-label="Stunde" required>
+        <input class="input_field" id="mm" type="number" name="mm" min="0" max="59" aria-label="Minute" required>
+      </div>
+      <div class="buttons">
+        <button id="save" class="buttonstyle" type="button">speichern</button>
+        <button id="reset" class="buttonstyle" type="button">löschen</button>
+      </div>
+    </form>
+  </body>
+</html>
